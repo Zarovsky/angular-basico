@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
-import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-main-page',
@@ -9,27 +8,13 @@ import { DbzService } from '../services/dbz.service';
 export class MainPageComponent {
 
 
-constructor(private dbzService: DbzService) {}
+constructor() {}
 
   nuevo : Personaje = {
     nombre:'Gloria Estefan',
     poder:10
   }
 
-personajes: Personaje[] = [
-  {
-    nombre: 'Goku',
-    poder: 15000
-},
-{
-  nombre: 'Vegeta',
-  poder: 9000
-}
-]
-
-agregarNuevoPersonaje( elemento: Personaje) {
-  this.personajes.push(elemento);
-}
 
 // Agregar(evento:SubmitEvent) {
 // evento.preventDefault();
